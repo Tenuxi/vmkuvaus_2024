@@ -1,0 +1,51 @@
+body {
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-repeat: none;
+}
+
+.middleBox {
+    background-color: #ffffff9f;
+    border-radius: 8px;
+    border: #191919 2px solid;
+    box-shadow: 5px 7px 7px #171717;
+    padding-bottom: 4rem;
+    margin: auto;
+}
+
+.contact h2 {
+    color: #171717;
+    font-weight: 700;
+}
+
+a {
+    color: #171717;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #363636;
+    font-weight: 600;
+}
+
+.some {
+    padding-top: 1em;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.some img {
+    max-width: 48px;
+    display: inline-block;
+}
+
+.some a {
+    max-width: 48px;
+}
+
+@media only screen and (max-width: 992px) {
+    body {
+        padding: 0 10px;
+    }
+}

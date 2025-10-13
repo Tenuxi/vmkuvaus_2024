@@ -1,0 +1,18 @@
+body {
+    background-image: url(../2025/img/bg.jpg);
+    background-size: cover;
+    background-repeat: none;
+}
+
+.middleBox {
+    background-color: #ffffff9f;
+    border-radius: 8px;
+    border: #191919 2px solid;
+    box-shadow: 5px 7px 7px #171717;
+    padding-bottom: 4rem;
+}
+
+.contact h2 {
+    color: #171717;
+    font-weight: 700;
+}

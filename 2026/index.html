@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VMKuvaus.fi - Ammattitaitoista valokuvausta</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -21,10 +22,21 @@
         </div>
 
         <ul class="nav-links" id="nav-links">
-            <li><a href="#etusivu">Etusivu</a></li>
-            <li><a href="#galleria">Galleria</a></li>
-            <li><a href="#palvelut">Palvelut</a></li>
-            <li><a href="#yhteys">Ota yhteyttä</a></li>
+            <li>
+                <a href="#hero">
+                    <i class="fa-solid fa-house"></i> Koti
+                </a>
+            </li>
+            <li>
+                <a href="#palvelut">
+                    <i class="fa-solid fa-camera"></i> Palvelut
+                </a>
+            </li>
+            <li>
+                <a href="#yhteys">
+                    <i class="fa-solid fa-paper-plane"></i> Ota yhteyttä
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -38,11 +50,118 @@
             </div>
         </section>
         
-        <section style="height: 100vh; padding: 50px; text-align: center;">
-            <h2>Tervetuloa VMKuvaus.fi sivuille</h2>
-            <p>Rullaa alas nähdäksesi parallax-efektin toiminnassa.</p>
-        </section>
+        
+
+
+
+        <section id="palvelut" class="services-section">
+    <div class="container">
+        <h2 class="section-title">Palvelut</h2>
+        <p class="section-subtitle">Ammattitaitoista valokuvausta elämän suuriin ja pieniin hetkiin.</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-ring"></i>
+                </div>
+                <h3>Hääkuvaus</h3>
+                <p>Ikuistetaan hääpäivänne tunteet ja tunnelma potreteista juhlan loppuun saakka.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-camera-retro"></i>
+                </div>
+                <h3>Yksilökuvaus</h3>
+                <p>Profiilikuvat, valmistujaiskuvat tai ihan vain upeat potretit sinusta itsestäsi.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-cake-candles"></i>
+                </div>
+                <h3>Juhlat & Tapahtumat</h3>
+                <p>Ristiäiset, syntymäpäivät ja muut elämän tärkeät virstanpylväät luotettavasti talteen.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-paw"></i>
+                </div>
+                <h3>Lapset & Lemmikit</h3>
+                <p>Lämminhenkiset ja kärsivälliset kuvaukset perheen pienimmille ja karvaturreille.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <h3>Yrityskuvaukset</h3>
+                <p>Henkilöstökuvat ja brändiä tukevat kuvamateriaalit yrityksesi tarpeisiin.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-car-side"></i>
+                </div>
+                <h3>Ajoneuvokuvaus</h3>
+                <p>Laadukkaat myyntikuvat tai fiiliskuvat autoista, moottoripyöristä ja muista kulkuneuvoista.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    
+
+<section id="yhteys" class="contact-section">
+    <div class="container">
+        <h2 class="section-title">Ota yhteyttä</h2>
+        <p class="section-subtitle">Suunnitellaan yhdessä ikimuistoinen kuvaushetki.</p>
+
+        <div class="contact-grid">
+            <div class="contact-box">
+                <i class="fa-solid fa-address-card contact-main-icon"></i>
+                <h3>Ville Majamäki</h3>
+                
+                <div class="contact-details">
+                    <div class="contact-row">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>046 657 4016</span>
+                    </div>
+                    <div class="contact-row">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:vmkuvaus@gmail.com">vmkuvaus@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-box">
+                <i class="fa-solid fa-share-nodes contact-main-icon"></i>
+                <h3>Seuraa somessa</h3>
+                <p>Pysy ajan tasalla uusimmista projekteista.</p>
+                
+                <div class="social-icons-wrapper">
+                    <a href="https://www.instagram.com/vmkuvaus/" target="_blank" class="social-link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/p/VMKuvaus-100093504430680/" target="_blank" class="social-link">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
     </main>
+
+    
 
     <footer>
         <p>&copy; 2026 VMKuvaus.fi. Kaikki oikeudet pidätetään.</p>

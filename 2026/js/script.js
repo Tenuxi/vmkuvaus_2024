@@ -12,30 +12,55 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
-    const navItems = document.querySelectorAll('.nav-links a');
+    const links = document.querySelectorAll('.nav-links a');
 
-    // Avaa/Sulje valikko klikkaamalla hampurilaista
+    // 1. Hampurilaisvalikon toiminta
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
     });
 
-    // Sulje valikko kun linkkiä klikataan (tärkeää mobiilissa)
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
+    // 2. Pehmeä rullaus ja valikon sulkeminen
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            // Suljetaan mobiilivalikko aina klikatessa
             hamburger.classList.remove('active');
             navLinks.classList.remove('active');
+
+            // Haetaan kohteen ID (esim. #palvelut)
+            const targetId = link.getAttribute('href');
+            
+            // Jos kyseessä on sisäinen linkki (alkaa #)
+            if (targetId.startsWith('#')) {
+                e.preventDefault(); // Estetään oletushyppy
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    // Rullataan kohteeseen pehmeästi
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
         });
     });
 
-    // Alkuperäinen Hero-napin toiminto
+    // Hero-alueen CTA-napin rullaus (jos käytössä)
     const ctaButton = document.getElementById('cta-button');
-    if(ctaButton) {
+    if (ctaButton) {
         ctaButton.addEventListener('click', () => {
-            window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+            const servicesSection = document.getElementById('palvelut');
+            if (servicesSection) {
+                servicesSection.scrollIntoView({ behavior: 'smooth' });
+            }
         });
     }
 });

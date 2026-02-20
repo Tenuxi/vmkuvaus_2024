@@ -1,270 +1,161 @@
-﻿:root {
-    --bg: #f7f5f1;
-    --surface: #ffffff;
-    --ink: #1f1e1c;
-    --muted: #5d5a55;
-    --accent: #a36a2f;
-    --accent-dark: #7f4d1a;
-    --stroke: #dfd8ce;
-    --shadow: 0 14px 40px rgba(32, 23, 16, 0.12);
-}
-
+﻿/* Perusasetukset */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: "Manrope", sans-serif;
-    color: var(--ink);
-    background: radial-gradient(circle at top right, #fffdf7 5%, var(--bg) 52%);
-    line-height: 1.6;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f4f4f2; /* Pehmeä off-white */
+    color: #333;
 }
 
-h1,
-h2,
-h3 {
-    margin: 0;
-    line-height: 1.2;
-}
-
-a {
-    color: inherit;
-}
-
-.site-header {
+/* Navigointi */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 10px 5%;
     position: sticky;
     top: 0;
-    z-index: 50;
-    background: rgba(247, 245, 241, 0.9);
-    border-bottom: 1px solid var(--stroke);
-    backdrop-filter: blur(8px);
+    z-index: 1000;
 }
 
-.nav {
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 0.9rem 1.2rem;
+nav {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-}
-
-.brand {
-    display: flex;
     align-items: center;
-    gap: 0.8rem;
-    text-decoration: none;
-    font-weight: 800;
-    letter-spacing: 0.03em;
 }
 
-.brand img {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
+.logo-img {
+    height: 50px; /* Säädä logon kokoa tästä */
+    width: auto;
 }
 
 .nav-links {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    font-weight: 600;
-    color: var(--muted);
-}
-
-.nav-links a:hover {
-    color: var(--ink);
-}
-
-main {
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 1.2rem;
-}
-
-.hero {
-    padding: 5.5rem 0 4rem;
-}
-
-.eyebrow {
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    font-size: 0.82rem;
-    color: var(--accent-dark);
-}
-
-.hero h1 {
-    margin-top: 0.8rem;
-    max-width: 14ch;
-    font-family: "Playfair Display", serif;
-    font-size: clamp(2rem, 5vw, 4rem);
-}
-
-.intro {
-    margin-top: 1.2rem;
-    max-width: 58ch;
-    color: var(--muted);
-    font-size: 1.1rem;
-}
-
-.hero-actions {
-    margin-top: 1.8rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.85rem;
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.72rem 1.1rem;
-    border-radius: 999px;
-    border: 1px solid transparent;
-    text-decoration: none;
-    font-weight: 700;
-    transition: transform 0.18s ease, background 0.18s ease;
-}
-
-.btn:hover {
-    transform: translateY(-1px);
-}
-
-.btn-primary {
-    background: var(--accent);
-    color: #fff;
-}
-
-.btn-primary:hover {
-    background: var(--accent-dark);
-}
-
-.btn-secondary {
-    border-color: var(--stroke);
-    background: var(--surface);
-}
-
-.section {
-    padding: 2rem 0;
-}
-
-.section h2 {
-    font-family: "Playfair Display", serif;
-    font-size: clamp(1.5rem, 4vw, 2.3rem);
-    margin-bottom: 1.2rem;
-}
-
-.section-lead {
-    margin: 0 0 1.4rem;
-    color: var(--muted);
-}
-
-.grid {
-    display: grid;
-    gap: 1rem;
-}
-
-.three-col {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.card {
-    border: 1px solid var(--stroke);
-    border-radius: 16px;
-    padding: 1.1rem;
-    background: var(--surface);
-    box-shadow: var(--shadow);
-}
-
-.card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.6rem;
-}
-
-.card p {
-    margin: 0;
-    color: var(--muted);
-}
-
-.gallery-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.gallery-item {
-    margin: 0;
-    border-radius: 16px;
-    min-height: 180px;
-    border: 1px solid var(--stroke);
-    background: linear-gradient(140deg, #ebe4da, #f9f5ef);
-    display: grid;
-    place-content: end start;
-    padding: 0.8rem;
-    font-weight: 700;
-    color: var(--accent-dark);
-}
-
-.price {
-    font-size: 1.35rem;
-    font-weight: 800;
-    color: var(--ink);
-    margin-bottom: 0.6rem;
-}
-
-.featured {
-    border-color: var(--accent);
-    transform: translateY(-4px);
-}
-
-.contact ul {
-    margin: 0;
-    padding: 0;
     list-style: none;
 }
 
-.contact li {
-    margin-bottom: 0.35rem;
+.nav-links li { margin-left: 25px; }
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
 }
 
-.contact a {
-    color: var(--accent-dark);
+/* --- Lisää nämä olemassa olevan CSS:n jatkoksi --- */
+
+/* Hampurilaisvalikon tyylit */
+.hamburger {
+    display: none; /* Piilossa työpöydällä */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
 }
 
-.site-footer {
-    border-top: 1px solid var(--stroke);
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: 0.3s;
+}
+
+
+
+/* Hero & Parallax */
+#hero {
+    height: 80vh; /* Hero-alueen korkeus */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.parallax-bg {
+    background-image: url('../images/hero.jpg');
+    background-attachment: fixed; /* Tärkeä parallax-efektille */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.3); /* Tummennus, jotta teksti erottuu */
+    padding: 40px;
+    border-radius: 5px;
     text-align: center;
-    padding: 1.2rem;
-    color: var(--muted);
-    font-size: 0.94rem;
 }
 
-@media (max-width: 900px) {
-    .three-col,
-    .gallery-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+#hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+/* Painike */
+button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 15px 40px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+footer {
+    padding: 40px;
+    text-align: center;
+    background: #eee;
+}
+
+
+/* Mobiilinäkymä (max 768px) */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        z-index: 1001;
     }
-}
 
-@media (max-width: 640px) {
-    .nav {
+    .nav-links {
+        position: fixed;
+        left: -100%; /* Piilossa vasemmalla */
+        top: 0;
         flex-direction: column;
-        align-items: flex-start;
+        background-color: #f4f4f2; /* Sama vaaleanharmaa */
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: 0.3s;
+        justify-content: center;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
 
-    .hero {
-        padding: 4rem 0 3rem;
+    .nav-links.active {
+        left: 0; /* Tuodaan näkyviin */
     }
 
-    .three-col,
-    .gallery-grid {
-        grid-template-columns: 1fr;
+    .nav-links li {
+        margin: 20px 0;
     }
 
-    .featured {
-        transform: none;
+    .nav-links a {
+        font-size: 1.5rem;
     }
+
+    /* Hampurilaiskuvakkeen animaatio kun valikko on auki */
+    .hamburger.active .bar:nth-child(2) { opacity: 0; }
+    .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 }
